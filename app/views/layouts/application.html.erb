@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>InternRuby2022FoodAndDrink</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rails6 AdminLTE 2.4</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
   </head>
-
-  <body>
-    <%= yield %>
+  <body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+      <%= render "shared/header" %>
+      <%= render "shared/nav" %>
+      <div class="content-wrapper">
+        <section class="content-header">
+          <h1>
+            Page Header
+            <small>Optional description</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+            <li class="active">Here</li>
+          </ol>
+        </section>
+        <section class="content container-fluid">
+          <%= yield %>
+        </section>
+      </div>
+      <%= render "shared/footer" %>
+    <div>
   </body>
 </html>
