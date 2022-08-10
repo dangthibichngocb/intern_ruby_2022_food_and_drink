@@ -1,0 +1,7 @@
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= category.name %></td>
+    <td><%= link_to "Edit", edit_admin_category_path(category), remote: true, class: "btn btn-default" %></td>
+    <td><%= link_to "Delete", admin_category_path(category), remote: true, class: "btn btn-danger" %></td>
+  </tr>
+<% end %>

@@ -5,14 +5,7 @@
         <div class="card-header">
           <h3 class="card-title">Responsive Hover Table</h3>
           <div class="card-tools">
-            <div class="input-group input-group-sm" style="width: 150px;">
-              <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-              <div class="input-group-append">
-                <button type="submit" class="btn btn-default">
-                  <i class="fas fa-search"></i>
-                </button>
-              </div>
-            </div>
+            <%= link_to "New Product", new_admin_category_path, remote: true, class: "btn btn-primary" %>
           </div>
         </div>
         <div class="card-body table-responsive p-0">
@@ -25,17 +18,12 @@
               </tr>
             </thead>
             <tbody>
-              <% for category in @categories %>
-                <tr>
-                  <th><%= category.country %></th>
-                </tr>
-                <tr>
-                  <td><%= category.name %></td>
-                </tr>
-              <% end %>
+             <%= render "category" %>
             </tbody>
           </table>
         </div>
       </div>
     </div>
   </div>
+</div>
+<div id="product-modal" class="modal fade"></div>

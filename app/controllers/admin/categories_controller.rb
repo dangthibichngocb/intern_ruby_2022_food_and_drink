@@ -1,14 +1,17 @@
 class Admin::CategoriesController < ApplicationController
   before_action :find_category, except: %i(new create index)
-
-  def index
-    @categories = Category.all
-  end
+  before_action :get_all_category, only: %i(index new edit destroy)
+  def index; end
 
   def show; end
 
   def new
     @category = Category.new
+    respond_to do |format|
+      format.html{render "_new"}
+      format.json{render json: @category}
+      format.js
+    end
   end
 
   def create
@@ -51,5 +54,9 @@ class Admin::CategoriesController < ApplicationController
 
     flash[:danger] = "category not found"
     redirect_to admin_categories_path
+  end
+
+  def get_all_category
+    @categories = Category.all
   end
 end
