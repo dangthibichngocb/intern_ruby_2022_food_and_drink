@@ -9,6 +9,8 @@ class User < ApplicationRecord
 
   enum status: {active: 1, block: 2}
 
+  enum status: {block: 2, active: 1}
+
   before_save :email_downcase
 
   validates :name, presence: true,
