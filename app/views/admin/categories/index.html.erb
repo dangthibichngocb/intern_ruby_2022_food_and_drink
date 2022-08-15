@@ -1,29 +1,27 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-12">
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Responsive Hover Table</h3>
-          <div class="card-tools">
-            <%= link_to "New Product", new_admin_category_path, remote: true, class: "btn btn-primary" %>
-          </div>
+<%= provide :title, t(".title") %>
+<div class="row mt-3">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-tools">
+          <%= link_to t(".new_category") , new_admin_category_path, remote: true, class: "btn btn-primary" %>
         </div>
-        <div class="card-body table-responsive p-0">
-          <table class="table table-hover text-nowrap">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-             <%= render "category" %>
-            </tbody>
-          </table>
-        </div>
+      </div>
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover text-nowrap">
+          <thead>
+            <tr>
+              <th><%= t ".id" %></th>
+              <th><%= t ".name" %></th>
+              <th><%= t ".status" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render "category" %>
+          </tbody>
+        </table>
+        <%== pagy_nav(@pagy) %>
       </div>
     </div>
   </div>
 </div>
-<div id="product-modal" class="modal fade"></div>

@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  include Pagy::Frontend
+  include Pagy::Backend
   protect_from_forgery with: :exception
-  layout proc { false if request.xhr? }
+  layout proc{false if request.xhr?}
 end

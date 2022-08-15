@@ -11,11 +11,11 @@
     <div class="wrapper">
       <%= render "shared/header" %>
       <%= render "shared/nav" %>
+      
       <div class="content-wrapper">
         <section class="content-header">
           <h1>
-            Page Header
-            <small>Optional description</small>
+            <%= yield(:title)%>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
@@ -23,6 +23,11 @@
           </ol>
         </section>
         <section class="content container-fluid">
+          <% flash.each do |message_type, message| %>
+            <div class="alert alert-<%= message_type %> alert_mess">
+              <%= message %>
+            </div>
+          <% end %>
           <%= yield %>
         </section>
       </div>

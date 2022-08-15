@@ -14,8 +14,7 @@ ActiveRecord::Schema.define(version: 2022_08_08_102634) do
 
   create_table "addresses", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
-    t.integer "type", default: 0
-    t.integer "type"
+    t.integer "types", default: 0
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -24,7 +23,7 @@ ActiveRecord::Schema.define(version: 2022_08_08_102634) do
 
   create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
-    t.integer "status"
+    t.integer "status", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -90,19 +89,11 @@ ActiveRecord::Schema.define(version: 2022_08_08_102634) do
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
-<<<<<<< HEAD
     t.string "phone"
     t.string "email"
     t.string "password_digest"
     t.integer "role", default: 1, comment: "1: 'user', 2: 'admin'"
     t.integer "status", default: 1, comment: "1: 'active', 2: 'block'"
-=======
-    t.integer "phone"
-    t.string "email"
-    t.string "password_digest"
-    t.integer "role"
-    t.integer "status"
->>>>>>> Task 51858 make migartion and model
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

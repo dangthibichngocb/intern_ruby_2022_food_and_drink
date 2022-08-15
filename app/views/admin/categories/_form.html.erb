@@ -1,21 +1,29 @@
-<div class="modal-dialog">
-  <div class="modal-content">
-    <%= form_for [:admin, @category], url: admin_categories_path do |f| %>
-      <div class="modal-body">
-        <ul class="errors"></ul>
-
-        <div class="form-group">
-          <%= f.label :name, class:"control-label" %>
-          <%= f.text_field :name, class: "form-control" %>
+<div class="row">
+  <%= form_for [:admin, @category] do |f| %>
+    <div class="col-md-6">
+      <div class="card card-primary">
+        <div class="card-header">
         </div>
-       
+        <form>
+          <div class="card-body">
+            <div class="form-group">
+              <%= f.label t(".name"), class:"control-label" %>
+                <%= f.text_field :name, class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.label t(".status"), class:"control-label" %>
+                <%= f.select :status, Category.statuses.keys.map { |w| [w.humanize, w] }, {class: "form-control" },
+                  style: "min-width: 100px;" %>
+            </div>
+          </div>
+          <div class="card-footer">
+            <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+          </div>
+        </form>
       </div>
-      <div class="modal-footer">
-      <button type="submit" class="btn btn-primary">
-      submit
-                        </button>
-        <%= link_to "Cancel", "#", class: "btn", data: {dismiss: "modal"} %>
-      </div>
+    </div>
+    <div class="col-md-6">
+      <%= render "shared/error_messages" , object: f.object%>
+    </div>
     <% end %>
-  </div>
 </div>

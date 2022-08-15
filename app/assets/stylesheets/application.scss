@@ -16,7 +16,9 @@
  *= require leaflet
  *= require font-awesome
  *= require admin-lte
+ *= require toastr
  */
  
 @import "bootstrap";
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "select2/dist/css/select2";

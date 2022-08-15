@@ -1,7 +1,21 @@
 <% @categories.each do |category| %>
   <tr>
-    <td><%= category.name %></td>
-    <td><%= link_to "Edit", edit_admin_category_path(category), remote: true, class: "btn btn-default" %></td>
-    <td><%= link_to "Delete", admin_category_path(category), remote: true, class: "btn btn-danger" %></td>
+    <td>
+      <%= category.id %>
+    </td>
+    <td>
+      <%= category.name %>
+    </td>
+    <td>
+      <%= category.status %>
+    </td>
+    <td class="w-25">
+      <%= link_to edit_admin_category_path(category), class: "btn btn-default float-left" do %>
+        <i class=" fas fa-edit" aria-hidden="true"></i>
+        <% end %>
+          <%= button_to admin_category_path(category), remote: true, method: :delete, class: "btn btn-danger float-right" do%>
+            <i class="fas fa-times" aria-hidden="true"></i>
+            <% end %>
+    </td>
   </tr>
-<% end %>
+  <% end %>

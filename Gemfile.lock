@@ -244,6 +244,7 @@ GEM
       sprockets (>= 3.0.0)
     thor (1.2.1)
     tilt (2.0.11)
+    toastr_rails (2.1.3)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -299,6 +300,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
   spring
+  toastr_rails
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
