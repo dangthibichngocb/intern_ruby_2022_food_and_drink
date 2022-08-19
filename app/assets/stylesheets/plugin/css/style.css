@@ -2775,3 +2775,340 @@ App section
     padding: 0 5px;
     color: #3a3e47;
   }
+
+  .product-card {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    color: #191847;
+  }
+
+  .img-display {
+    overflow: hidden;
+  }
+
+  .img-showcase {
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+
+  .img-showcase img {
+    min-width: 100%;
+  }
+
+  .img-select {
+    display: flex;
+  }
+
+  .img-item {
+    margin: 0.3rem;
+  }
+
+  .img-item:nth-child(1),
+  .img-item:nth-child(2),
+  .img-item:nth-child(3) {
+    margin-right: 0;
+  }
+
+  .img-item:hover {
+    opacity: 0.8;
+  }
+
+  .img-child {
+    width: 100px;
+  }
+
+  .product-name {
+    margin: 10px 0 20px 0;
+  }
+
+  .regular-price {
+    text-decoration: line-through;
+  }
+
+  .discount-price {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  .offer-info {
+    font-size: 14px;
+    color: gray;
+  }
+
+  .stock {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .stock-status {
+    width: 14px;
+    height: 14px;
+    background: #00d98b;
+    border-radius: 50%;
+  }
+
+  .stock-info {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+  }
+
+  .cable-choose {
+    margin-bottom: 20px;
+  }
+
+  .cable-choose button {
+    border: 2px solid #E1E8EE;
+    border-radius: 6px;
+    padding: 8px 20px;
+    font-size: 14px;
+    color: #5E6977;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .5s;
+  }
+
+  .cable-choose button:hover,
+  .cable-choose button:active,
+  .cable-choose button:focus {
+    border: 2px solid #86939E;
+    outline: none;
+  }
+
+  .cable-config {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+
+  .cable-config a {
+    color: #358ED7;
+    text-decoration: none;
+    font-size: 12px;
+    position: relative;
+    margin: 10px 0;
+    display: inline-block;
+  }
+
+  input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+
+  .number-input {
+    border: 2px solid #ddd;
+    display: inline-flex;
+  }
+
+  .number-input,
+  .number-input * {
+    box-sizing: border-box;
+  }
+
+  .number-input button {
+    outline:none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+  }
+
+  .number-input button:after {
+    display: inline-block;
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f077';
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  .number-input button.plus:after {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  .number-input input[type=number] {
+    font-family: sans-serif;
+    max-width: 5rem;
+    padding: .5rem;
+    border: solid #ddd;
+    border-width: 0 2px;
+    font-size: 2rem;
+    height: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .title {
+    margin-bottom: 5vh;
+  }
+
+
+  .cart_show .cart {
+    background-color: #fff;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+
+  @media(max-width:767px) {
+    .cart_show .cart {
+      padding: 4vh;
+      border-bottom-left-radius: unset;
+      border-top-right-radius: 1rem;
+    }
+  }
+
+  .cart_show .summary {
+    background-color: #ddd;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+    color: rgb(65, 65, 65);
+  }
+
+  @media(max-width:767px) {
+    .cart_show .summary {
+      border-top-right-radius: unset;
+      border-bottom-left-radius: 1rem;
+    }
+  }
+
+  .cart_show .summary .col-2 {
+    padding: 0;
+  }
+
+  .cart_show .summary .col-10 {
+    padding: 0;
+  }
+
+  .cart_show .row {
+    margin: 0;
+  }
+
+  .cart_show .title b {
+    font-size: 1.5rem;
+  }
+
+  .cart_show .main {
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%;
+  }
+
+  .cart_show .col-2, .col {
+    padding: 0 1vh;
+  }
+
+  .cart_show a {
+    padding: 0 1vh;
+  }
+
+  .cart_show .close {
+    margin-left: auto;
+    font-size: 0.7rem;
+  }
+
+  .cart_show img {
+    width: 3.5rem;
+  }
+
+  .cart_show .back-to-shop {
+    margin-top: 4.5rem;
+  }
+
+  .cart_show h5 {
+    margin-top: 4vh;
+  }
+
+  .cart_show hr {
+    margin-top: 1.25rem;
+  }
+
+  .cart_show form {
+    padding: 2vh 0;
+  }
+
+  .cart_show select {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1.5vh 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+  }
+
+  .cart_show input {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+  }
+
+  .cart_show input:focus::-webkit-input-placeholder {
+    color:transparent;
+  }
+
+  .cart_show .btn {
+    background-color: #000;
+    border-color: #000;
+    color: white;
+    width: 100%;
+    font-size: 0.7rem;
+    margin-top: 4vh;
+    padding: 1vh;
+    border-radius: 0;
+  }
+
+  .cart_show .btn:focus {
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    -webkit-box-shadow: none;
+    transition: none;
+  }
+
+  .cart_show .btn:hover {
+    color: white;
+  }
+
+  .cart_show a {
+    color: black;
+  }
+
+  .cart_show a:hover {
+    color: black;
+    text-decoration: none;
+  }
+
+  #code {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+  }
+
+  .cart_show .buton_list input[type=submit] {
+    display:inline-block;
+  }
+>>>>>>> Task.51847 : [User] Add to cart
