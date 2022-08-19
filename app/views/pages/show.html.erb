@@ -45,12 +45,14 @@
           </div>
           <div class="number-input">
             <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="1" type="number">
+            <input class="quantity" id="qty" min="1" max="<%= @product.product_attributes.first.quantity %>" name="quantity" value="1" type="number">
             <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
           </div>
-          <div class="number-input">
+          <div>
+            <%= button_to t(".order_now"),
+              line_items_path(:product_attribute_id => @product.product_attributes.first.id),
+              class: "btn theme-btn-dash pull-right" %>
           </div>
-          <a href="#" class="btn theme-btn-dash pull-right"><%= t ".order_now" %></a>
         </div>
       </div>
     </div>
