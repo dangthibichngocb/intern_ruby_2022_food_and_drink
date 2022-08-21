@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     resources :dashboard, only: %i(index show)
-    get 'carts/:id' => "carts#show", as: "cart"
+    get 'carts', to: "carts#index"
     post 'line_items/:id/add' => "line_items#add_quantity", as: "line_item_add"
     post 'line_items/:id/reduce' => "line_items#reduce_quantity", as: "line_item_reduce"
     post 'line_items' => "line_items#create"

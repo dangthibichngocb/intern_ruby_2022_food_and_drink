@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
   layout "dashboard"
-  def show
+  def index
     @cart = @current_cart
   end
 
