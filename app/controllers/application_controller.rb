@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   include Pagy::Backend
+  include AuthHelper
+
   protect_from_forgery with: :exception
   skip_before_action :verify_authenticity_token
 
@@ -29,5 +31,12 @@ class ApplicationController < ActionController::Base
 
     @current_cart = Cart.create
     session[:cart_id] = @current_cart.id
+  end
+
+  def logged_in_user
+    return if logged_in?
+
+    flash[:danger] = t ".please_log_in"
+    redirect_to auth_login_path
   end
 end
