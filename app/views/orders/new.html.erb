@@ -1,0 +1,45 @@
+<div class="container m-t-30">
+  <div class="widget clearfix">
+    <!-- /widget heading -->
+    <div class="widget-heading">
+      <h3 class="widget-title text-dark">
+        Cart summary
+      </h3>
+      <div class="clearfix"></div>
+    </div>
+    <div class="widget-body">
+      <div class="row">
+        <%= render "form" %>
+        <div class="col-sm-6">
+          <div class="cart-totals margin-b-20">
+            <div class="cart-totals-title">
+              <h4>Cart Summary</h4>
+            </div>
+            <div class="cart-totals-fields">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>Cart Subtotal</td>
+                    <td>$29.00</td>
+                  </tr>
+                  <tr>
+                    <td>Shipping &amp; Handling</td>
+                    <td>$2.00</td>
+                  </tr>
+                  <tr>
+                    <td class="text-color"><strong>Total</strong></td>
+                    <td class="text-color"><strong>$31.00</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!--cart summary-->
+          <div class="payment-option">
+            <p class="text-xs-center"> <a href="#" class="btn btn-outline-success btn-block">Pay now</a> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

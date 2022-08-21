@@ -49,7 +49,9 @@
           <div class="col text-uppercase"><%= t ".total_price" %> </div>
           <div class="col text-right"><%= @cart.sub_total %></div>
         </div>
-        <button class="btn text-uppercase"><%= t ".checkout" %></button>
+        <%= link_to new_order_path, class: "btn text-uppercase" do %>
+          <%= t ".checkout" %>
+        <% end %>
       </div>
     </div>
   </div>
