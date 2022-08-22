@@ -129,3 +129,16 @@ vi:
       back_to_shop: "Quay trở lại cửa hàng"
       checkout: "Thanh toán"
       summary: "Chi tiết thanh toán"
+  orders:
+    create:
+      order_success: "Đặt hàng thành công!"
+      order_fail: "Đặt hàng không thành công"
+    new:
+      cart_sum: "Chi tiết giỏ hàng"
+      order_now: "Đặt hàng ngay"
+      total: "Tổng giá"
+      checkout: "Thanh toán"
+      phone: "Điện thoại"
+      address: "Địa chỉ"
+      note: "Ghi chú"
+      email: "Email"
