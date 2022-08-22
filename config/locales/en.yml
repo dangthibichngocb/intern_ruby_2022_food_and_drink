@@ -142,3 +142,16 @@ en:
       back_to_shop: "Back to shop"
       checkout: "Checkout"
       summary: "Summary"
+  orders:
+    create:
+      order_success: "Order successfully!"
+      order_fail: "Order fail"
+    new:
+      cart_sum: "Cart Summary"
+      order_now: "Order Now"
+      total: "Total Price"
+      checkout: "Checkout"
+      phone: "Phone"
+      address: "Address"
+      note: "Note"
+      email: "Email"
