@@ -29,6 +29,8 @@ class ApplicationController < ActionController::Base
       format.xml{head :not_found}
       format.any{head :not_found}
     end
+  end
+
   def current_cart
     if session[:cart_id]
       cart = Cart.find_by(id: session[:cart_id])

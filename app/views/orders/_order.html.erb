@@ -12,19 +12,29 @@
     <%= order.total %>
   </td>
   <td>
-    <%= order.created_at %>
+    <%= order.created_at.to_formatted_s(:short) %>
   </td>
   <td>
-    <% if order.orders_pendding? %>
-      <span class="badge badge-danger text-danger"><%= order.status %></span>
+    <% if order.orders_pending? %>
+      <span class="badge badge-danger text-danger"><%= order.status_i18n %></span>
     <% elsif order.orders_aprove? %>
-      <span class="badge badge-warning text-warning"><%= order.status %></span>
+      <span class="badge badge-warning text-warning"><%= order.status_i18n %></span>
     <% elsif order.orders_processing? %>
-      <span class="badge badge-success text-success"><%= order.status %></span>
+      <span class="badge badge-info text-info"><%= order.status_i18n %></span>
+    <% elsif order.orders_success? %>
+      <span class="badge badge-success text-success"><%= order.status_i18n %></span>
     <% else %>
-      <span class="badge badge-secondary text-secondary"><%= order.status %></span>
+      <span class="badge badge-secondary text-secondary"><%= order.status_i18n %></span>
     <% end %>
   </td>
   <td>
+    <% if order.orders_pending? %>
+      <%= button_to change_status_order_path(order, status: :reject, email: order.user_email), method: :patch, class: "btn btn-primary" do %>
+        <%= t ".reject" %>
+      <% end %>
+    <% end %>
+    <%= link_to order_path(order), class: "btn btn-primary" do %>
+      <%= t ".detail" %>
+    <% end %>
   </td>
 </tr>
