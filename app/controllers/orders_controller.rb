@@ -2,7 +2,9 @@ class OrdersController < ApplicationController
   layout "dashboard"
   before_action :logged_in_user
 
-  def index; end
+  def index
+    @pagy, @orders = pagy current_user.orders.order_latest
+  end
 
   def new
     @cart = @current_cart
@@ -27,6 +29,8 @@ class OrdersController < ApplicationController
     end
   end
 
+  def show; end
+
   private
 
   def order_params
@@ -36,7 +40,7 @@ class OrdersController < ApplicationController
   def insert_order_detail order_insert
     @current_cart.line_items.each do |line_item|
       order_insert.order_details.create!(
-        product_attribute_id: line_item.product_attribute.id,
+        product_attributes_id: line_item.product_attribute.id,
         quantity:   line_item.quantity,
         price: line_item.product_attribute.price
       )
