@@ -64,7 +64,7 @@ end
 end
 
 Product.all.each { |pro| pro.product_attributes.create!(
-  price: Faker::Commerce.price,
+  price: 20,
   quantity: 100,
   size_id: Faker::Number.between(from: 1, to: 4)
   )

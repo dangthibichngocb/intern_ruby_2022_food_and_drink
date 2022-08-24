@@ -40,7 +40,7 @@ class OrdersController < ApplicationController
   def insert_order_detail order_insert
     @current_cart.line_items.each do |line_item|
       order_insert.order_details.create!(
-        product_attributes_id: line_item.product_attribute.id,
+        product_attribute_id: line_item.product_attribute.id,
         quantity:   line_item.quantity,
         price: line_item.product_attribute.price
       )
