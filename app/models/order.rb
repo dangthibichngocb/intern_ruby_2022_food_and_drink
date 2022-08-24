@@ -8,4 +8,5 @@ class Order < ApplicationRecord
   validates :total, presence: true
   validates :phone, presence: true
 
+  scope :order_latest, ->{order created_at: :desc}
 end
